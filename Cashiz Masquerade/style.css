@@ -1,0 +1,222 @@
+:root {
+    --blue: #007bff;
+    --indigo: #6610f2;
+    --purple: #6f42c1;
+    --pink: #e83e8c;
+    --red: #dc3545;
+    --orange: #fd7e14;
+    --yellow: #ffc107;
+    --green: #28a745;
+    --teal: #20c997;
+    --cyan: #17a2b8;
+    --white: #fff;
+    --gray: #6c757d;
+    --gray-dark: #343a40;
+    --primary: #007bff;
+    --secondary: #6c757d;
+    --success: #28a745;
+    --info: #17a2b8;
+    --warning: #ffc107;
+    --danger: #dc3545;
+    --light: #f8f9fa;
+    --dark: #343a40;
+    --breakpoint-xs: 0;
+    --breakpoint-sm: 576px;
+    --breakpoint-md: 768px;
+    --breakpoint-lg: 992px;
+    --breakpoint-xl: 1200px;
+    --font-family-sans-serif: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol";
+    --font-family-monospace: SFMono-Regular,Menlo,Monaco,Consolas,"Liberation Mono","Courier New",monospace
+}
+
+
+
+
+* {
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
+}
+
+/* Header/Blog Title */
+.header {
+    height: 100vh;
+    padding: 30px;
+    text-align: center;
+    background-image: url(images/pic1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    backdrop-filter: blur(40px);
+
+}
+
+.image-container {
+  float: left;
+  width: 33.33%;
+  padding: 5px;
+}
+
+h1, p{
+    position: relative;
+    top: 150px;
+}
+.header p{
+    font-size: 20px;
+    color: var(--dark);
+    font-weight: 800;
+}
+.card card-body{
+    background-color: blueviolet;
+} 
+.header h1 {
+    font-size: 40px;
+    font-weight: 900;
+    color: var(--white);
+}
+  
+/* Style the top navigation bar */
+.topnav {
+    position: -webkit-sticky;
+    top: 0;
+    overflow: hidden;
+    background-color: var(--primary);
+    padding: 20px;
+}
+  
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    font-size: 20px;
+    text-transform: uppercase;
+    font-weight: 800;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    transition: ease-in-out 0.3s;
+}
+.topnav a:hover {
+    border-bottom: 4px solid var(--danger);
+    color: black;
+
+}
+/* container to contain about us */
+.container{
+    align-content: center;
+    grid-template-columns: auto auto auto;
+    grid-gap: 10px;
+    margin: 20px;
+}
+.about{
+    display: inline;
+    float: left;
+}
+.about h1{
+    border-bottom: 3px solid yellow;
+    width: 29%;
+    border-width: 4px;
+    border-left: var(--danger);
+    text-transform: uppercase;
+    font-weight: 700;
+}
+span{
+    color: var(--red);
+}
+.about p{
+    line-break: 100%;
+}
+.container img{
+    display: flex;
+    position: absolute;
+    right: 30px;
+    top: 860px;
+    width: 400px;
+    height: 500px;
+    box-shadow: 0px 5px 10px var(--dark);
+    transition: transform 0.5s;
+}
+.container img:hover{
+    transform: translateY(-10px);
+}
+/* Change color on hover */
+
+
+  
+
+img{
+    width: 100%;
+    height: 120%;
+}
+  
+/* Add a card effect for articles */
+.card{
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+  
+
+
+  
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+    .topnav{   
+      width: 100%;
+      padding: 0;
+      background-color: var(--gray);
+      border-bottom: none;
+    }
+}
+  
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a{
+      float: none;
+      width: 100%;
+      border-bottom: none;
+    }
+}
+@media screen and (min-width: 400px) {
+    .topnav{
+        float: none;
+        display: block;
+        border-bottom: none;
+    }
+}
+@media screen and (min-width: 500px) {
+    .header h1{
+        width: 100%;
+        float: none;
+    }
+    
+}
+
+/* container responsive */
+@media screen and (max-width: 500px) {
+    .container{
+        display: block;
+        float: left;
+    }
+    img{
+        display: none;
+        visibility: collapse;
+    }
+    h1{
+        float: inline-start;
+    }
+    p{
+        display: inline;
+    }
+    .about{
+        display: block;
+        width: 20px;
+        height: 100px;
+    }
+}
